@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background: #ffc600;
+  background: #4479c3;
   font-family: 'helvetica neue';
   font-size: 20px;
   font-weight: 200;
@@ -12,7 +12,7 @@ html {
 
 input {
   width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 
 .search-form {
@@ -21,7 +21,7 @@ input {
 }
 
 input.search {
-  margin: 0;
+  margin-bottom: 20px;
   text-align: center;
   outline: 0;
   border: 10px solid #F7F7F7;
@@ -47,7 +47,7 @@ input.search {
   list-style: none;
   border-bottom: 1px solid #D8D8D8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
-  margin: 0;
+  margin: 1px 0;
   padding: 20px;
   transition: background 0.2s;
   display: flex;
@@ -56,12 +56,12 @@ input.search {
 }
 
 .suggestions li:nth-child(even) {
-  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  /* transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001); */
   background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
 }
 
 .suggestions li:nth-child(odd) {
-  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  /* transform: perspective(100px) rotateX(-3deg) translateY(3px); */
   background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
 }
 
@@ -70,5 +70,5 @@ span.population {
 }
 
 .hl {
-  background: #ffc600;
+  background: #4479c3;
 }
