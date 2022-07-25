@@ -18,6 +18,7 @@ function findMatches(wordToMatch, cities) {
     });
 }
 
+// function grabbed from stack overflow to add comma separators 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
