@@ -17,11 +17,11 @@ input {
 
 .search-form {
   max-width: 400px;
-  margin: 50px auto;
+  margin: 0px auto;
 }
 
 input.search {
-  margin-bottom: 20px;
+  margin: 0;
   text-align: center;
   outline: 0;
   border: 10px solid #F7F7F7;
@@ -36,7 +36,7 @@ input.search {
 }
 
 .suggestions {
-  margin: 0;
+  margin: 25px 0;
   padding: 0;
   position: relative;
   /*perspective: 20px;*/
@@ -47,7 +47,7 @@ input.search {
   list-style: none;
   border-bottom: 1px solid #D8D8D8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
-  margin: 1px 0;
+  margin: 0;
   padding: 20px;
   transition: background 0.2s;
   display: flex;
@@ -70,5 +70,5 @@ span.population {
 }
 
 .hl {
-  background: #4479c3;
+  background: #4479c374;
 }
