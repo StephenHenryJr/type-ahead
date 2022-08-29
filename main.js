@@ -8,6 +8,8 @@ fetch(endpoint)
     .then(response => response.json())
     .then(jsonResponse => cities.push(...jsonResponse))
 
+console.log(cities)   
+
 // finds matches by taking in variable of wordToMatch
 // this will come from our input
 // filter through our cities array for city or state matching our regex which comes from our wordToMatch inputs
@@ -21,23 +23,23 @@ function findMatches(wordToMatch, cities) {
 // function grabbed from stack overflow to add comma separators 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  }
-  
+}
+
 
 // variable matchArray captures what is returned from our search
 // we use .map() to return and plug the values into HTML
 function displayMatches() {
+    console.log(this.value);
     const matchArray = findMatches(this.value, cities);
     const html = matchArray.map(place => {
         const regex = new RegExp(this.value, 'gi'); // create variable with RexExp rules
-        const cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`); 
-        const stateName = place.state.replace(regex, `<span class="hl">${this.value}</span>`); 
+        const cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`);
+        const stateName = place.state.replace(regex, `<span class="hl">${this.value}</span>`);
         return `
             <li>
                 <span class="name">${cityName}, ${stateName}</span>
                 <span class="population">${numberWithCommas(place.population)}</span>
-            </li>
-        `
+            </li>`
     }).join('');
     suggestions.innerHTML = html;
 }
